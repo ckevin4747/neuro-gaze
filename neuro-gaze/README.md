@@ -15,11 +15,15 @@ This repository provides the code for a **two-stage neuromorphic gaze decoding p
 ```plaintext
 .
 ├── LSTM/
+│   ├── ckpts/             # pretrained LSTM weights
 │   ├── train.py           # Train the LSTM model on raw Jeonju dataset
 │   ├── inference.py       # Run inference, generate attention-guided segments
+│   ├── evaluate.py        # Evaluate LSTM performance
+│   ├── model.py           # LSTM model architecture
 │
-├── data/
-│   └── data_jeonju_0904   # Original dataset for training
+├── data_jeonju_0904 /
+│   ├── task1_v2_x4        # Original dataset for training
+│   └── task2_v2_x8        # Original dataset for training
 │
 ├── SNN/
 │   ├── preprocess.py      # Convert raw EOG → spiking data using LSTM attention
